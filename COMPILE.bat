@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 
 @RD /S /Q build
 mkdir build

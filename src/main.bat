@@ -35,14 +35,14 @@ echo *You can have up to 10 groups of CRNs.
 echo *Each group can have 1 to 6 classes.
 echo.
 pause
+:restart
 call :drawui
 call :entercrn
 
+echo.
 SET /P AREYOUSURE=Would you like to continue using TTRH? (Y/[N])?
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
-
-
-exit /b
+goto restart
 
 :entercrn
 echo Example: 8151,6244,7149,7925,4001,8506 8042,7280,6668,6867,4356,5692
@@ -65,14 +65,17 @@ echo.
 echo Hotkeys are ready. Try pressing Ctrl+Alt+1-10 on a text document to test your hotkey.
 echo.
 echo Press any key to stop the hotkeys and edit the CRNs.
+echo.
 pause
 echo Turning off hotkeys...
-taskkill /IM truman-registration-helper.exe /F
+taskkill /IM truman-registration-helper.exe /F > nul
 exit /b
 
 :drawui
 cls
+color 05
 echo Tanner's Truman Registration Helper
 echo ===================================
+color 07
 echo.
 exit /b

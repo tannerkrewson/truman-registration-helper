@@ -1,5 +1,3 @@
-; truman-registration-helper
-; main.ahk
 
 SendMode Input ; Makes AutoHotkey Send faster
 
