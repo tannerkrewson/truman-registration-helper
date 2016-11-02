@@ -1,5 +1,9 @@
 @echo off
-setlocal EnableDelayedExpansion
+SETLOCAL EnableDelayedExpansion
+rem For colored text:
+for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
+  set "DEL=%%a"
+)
 
 call :drawui
 echo Welcome to Tanner's Truman Registration Helper.
@@ -40,7 +44,7 @@ call :drawui
 call :entercrn
 
 echo.
-SET /P AREYOUSURE=Would you like to continue using TTRH? (Y/[N])?
+SET /P AREYOUSURE="Would you like to continue using TTRH? (y/n) "
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 goto restart
 
@@ -52,30 +56,58 @@ start bin\truman-registration-helper.exe %params%
 call :drawui
 echo Instructions:
 echo 1. When registration opens, click on the first text box.
-echo 2. Press your hotkey: Ctrl+Alt+1
+echo 2. Press your hotkey: Ctrl+Alt+1 or Ctrl+Alt+2 etc.
 echo 3. Press the enter key.
 echo.
-echo Do the same with the another hotkey to enter your backups:
-echo 1. Click on the first text box again.
-echo 2. Press your hotkey: Ctrl+Alt+2 or 3,4,5....
-echo 3. Press the enter key.
+call :colorEcho 70 "Current Hotkeys and CRNs"
 echo.
-echo Current CRNs: %params%
+
+set t=%params%
+set /a count=1
+:loop
+for /f "tokens=1*" %%a in ("%t%") do (
+   set msg=Ctrl+Alt+%count% =^> %%a
+   echo !msg!
+   set t=%%b
+   set /a count+=1
+   )
+if defined t goto :loop
+
 echo.
-echo Hotkeys are ready. Try pressing Ctrl+Alt+1-10 on a text document to test your hotkey.
+call :colorEcho 0a "=============="
 echo.
-echo Press any key to stop the hotkeys and edit the CRNs.
+call :colorEcho 0a "HOTKEYS ACTIVE"
 echo.
-pause
-echo Turning off hotkeys...
+call :colorEcho 0a "=============="
+echo.
+echo.
+call :colorEcho 0F "== Press any key to stop the hotkeys and edit the CRNs =="
+pause >nul
+call :drawui
+call :colorEcho 0c "================"
+echo.
+call :colorEcho 0c "HOTKEYS DISABLED"
+echo.
+call :colorEcho 0c "================"
+echo.
 taskkill /IM truman-registration-helper.exe /F > nul
 exit /b
 
 :drawui
 cls
-color 05
-echo Tanner's Truman Registration Helper
-echo ===================================
-color 07
+call :colorEcho 75 "==================================="
+echo.
+call :colorEcho 70 "Tanner's"
+call :colorEcho 75 " Truman"
+call :colorEcho 70 " Registration Helper"
+echo.
+call :colorEcho 75 "==================================="
+echo.
 echo.
 exit /b
+
+:colorEcho
+echo off
+<nul set /p ".=%DEL%" > "%~2"
+findstr /v /a:%1 /R "^$" "%~2" nul
+del "%~2" > nul 2>&1i

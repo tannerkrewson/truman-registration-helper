@@ -1,5 +1,7 @@
 @echo off
 
+taskkill /IM truman-registration-helper.exe /F > nul
+
 @RD /S /Q build
 mkdir build
 mkdir build\bin
