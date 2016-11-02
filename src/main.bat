@@ -95,13 +95,40 @@ exit /b
 
 :drawui
 cls
-call :colorEcho 75 "==================================="
+echo Connecting to the registration server...
 echo.
-call :colorEcho 70 "Tanner's"
-call :colorEcho 75 " Truman"
-call :colorEcho 70 " Registration Helper"
+echo If you are stuck on this screen, try reopening TTRH.
+for /f "tokens=1 delims=" %%i in ('ping -n 1 shale.truman.edu') do set output=%%i
+for /f "tokens=9" %%i in ("%output%") do set output=%%i
+set output=%output:~0,-2%
+cls
+call :colorEcho 0f "=========================================="
 echo.
-call :colorEcho 75 "==================================="
+call :colorEcho 0f "Tanner's"
+call :colorEcho 05 " Truman"
+call :colorEcho 0f " Registration Helper"
+echo.
+call :colorEcho 07 "Connection to Registration Server= "
+if %output% LEQ 1 (
+  call :colorEcho 0A " PERFECT"
+) ELSE (
+  if %output% LEQ 10 (
+    call :colorEcho 02 " GREAT"
+  ) ELSE (
+    if %output% LEQ 30 (
+      call :colorEcho 02 " GOOD"
+    ) ELSE (
+      if %output% LEQ 100 (
+        call :colorEcho 0E " DECENT"
+      ) ELSE (
+        call :colorEcho 0C " SLOW"
+      )
+    )
+  )
+)
+call :colorEcho 0f " %output%ms"
+echo.
+call :colorEcho 0f "=========================================="
 echo.
 echo.
 exit /b
