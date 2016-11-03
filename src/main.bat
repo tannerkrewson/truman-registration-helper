@@ -5,7 +5,7 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
   set "DEL=%%a"
 )
 rem Kill any old AutoHotkey process
-taskkill /IM truman-registration-helper.exe /F > nul
+taskkill /IM ttrh-ahk.exe /F > nul
 
 call :drawui
 call :colorEcho 0B "Welcome to Tanner's Truman Registration Helper."
@@ -42,7 +42,7 @@ echo.
 call :colorEcho 70 "Enter all your CRNs in the above format here"
 echo.
 set /p params=""
-start bin\truman-registration-helper.exe %params%
+start ttrh-ahk.exe %params%
 call :drawui
 echo Instructions:
 echo 1. When registration opens, click on the first text box.
@@ -81,7 +81,7 @@ call :colorEcho 0c "HOTKEYS DISABLED"
 echo.
 call :colorEcho 0c "================"
 echo.
-taskkill /IM truman-registration-helper.exe /F > nul
+taskkill /IM ttrh-ahk.exe /F > nul
 exit /b
 
 :drawui
