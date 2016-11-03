@@ -4,39 +4,19 @@ rem For colored text:
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
   set "DEL=%%a"
 )
+rem Kill any old AutoHotkey process
+taskkill /IM truman-registration-helper.exe /F > nul
 
 call :drawui
-echo Welcome to Tanner's Truman Registration Helper.
+call :colorEcho 0B "Welcome to Tanner's Truman Registration Helper."
+echo.
+echo.
 echo TTRH can help you get an advantage when registering by typing your classes for you.
-echo TTRH can hold up to 10 different sets of 6 CRNs.
+echo TTRH can hold up to 9 different sets of 10 CRNs.
 echo.
-pause
-call :drawui
-echo TTRH is used by pressing Ctrl+Alt+1-10 in the registration box.
-echo The numbers 1 through 10 can each store a different set of class CRNs.
+echo TTRH is used by pressing Ctrl+Alt+1-9 in the registration box.
+echo The numbers 1 through 9 can each store a different set of class CRNs.
 echo This is helpful in the case you do not get your first choices.
-echo.
-pause
-call :drawui
-echo Format: CRN1,CRN2,CRN3,CRN4,CRN5,CRN6 CRN7,CRN8,CRN9,CRN10,CRN11,CRN12
-echo                                      ^^single space to seperate groups
-echo.
-echo Example:
-echo If your main choice classes are 8151,6244,7149,7925,4001,8506...
-echo ...and your backup choices are 8042,7280,6668,6867,4356,5692...
-echo.
-echo You should enter the following into this program, all in one line:
-echo 8151,6244,7149,7925,4001,8506 8042,7280,6668,6867,4356,5692
-echo                              ^^single space to seperate groups
-echo.
-echo *In this example, the first block of six classes will be assigned to Ctrl+Alt+1
-echo  and the second block of six will be mapped to Ctrl+Alt+2 and so on.
-echo.
-pause
-call :drawui
-echo Tips:
-echo *You can have up to 10 groups of CRNs.
-echo *Each group can have 1 to 6 classes.
 echo.
 pause
 :restart
@@ -49,18 +29,30 @@ IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 goto restart
 
 :entercrn
-echo Example: 8151,6244,7149,7925,4001,8506 8042,7280,6668,6867,4356,5692
+call :colorEcho 0B "Enter your CRNs, seperated by a comma. (no space, just a comma)"
 echo.
-set /p params="Enter all your CRNs in the above format: "
+echo.
+echo If you want more than one group of CRNs, put a space after the first group, and enter more CRNs just like before. You can have up to 10 CRNs per group, and up to 9 groups.
+echo.
+call :colorEcho 0f "Single Group Example"
+echo : 8151,6244,7149,3458,1236,8388
+call :colorEcho 0f "Multi Group Example"
+echo : 3453,2774 8234,3458,5678,2345 2323,2348,2345
+echo.
+call :colorEcho 70 "Enter all your CRNs in the above format here"
+echo.
+set /p params=""
 start bin\truman-registration-helper.exe %params%
 call :drawui
 echo Instructions:
 echo 1. When registration opens, click on the first text box.
 echo 2. Press your hotkey: Ctrl+Alt+1 or Ctrl+Alt+2 etc.
 echo.
+echo If you want to try out the hotkeys before registration, go to this website:
+echo www.tannerkrewson.com/truman-registration-helper/
+echo.
 call :colorEcho 70 "Current Hotkeys and CRNs"
 echo.
-
 set t=%params%
 set /a count=1
 :loop
