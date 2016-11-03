@@ -57,7 +57,6 @@ call :drawui
 echo Instructions:
 echo 1. When registration opens, click on the first text box.
 echo 2. Press your hotkey: Ctrl+Alt+1 or Ctrl+Alt+2 etc.
-echo 3. Press the enter key.
 echo.
 call :colorEcho 70 "Current Hotkeys and CRNs"
 echo.

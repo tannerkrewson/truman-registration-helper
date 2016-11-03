@@ -36,6 +36,7 @@ Register()
 						Send, %crn%
 						Send, {TAB}
 					}
+					Send, {Enter}
 	        Break
 	    }
 	}
