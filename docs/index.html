@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<HTML lang="en">
+
+<HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META HTTP-EQUIV="Pragma" NAME="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" NAME="Cache-Control" CONTENT="no-cache">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <LINK REL="stylesheet" HREF="https://shale.truman.edu//css/web_defaultapp_no_nav.css" TYPE="text/css">
+    <LINK REL="stylesheet" HREF="https://shale.truman.edu//css/web_defaultprint.css" TYPE="text/css" media="print">
+    <link rel="stylesheet" type="text/css" href="https://truview.truman.edu/TruView-theme/css/banner-wrapper.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <TITLE>Mock Registration Page - TTRH</TITLE>
+    <META HTTP-EQUIV="Content-Script-Type" NAME="Default_Script_Language" CONTENT="text/javascript">
+    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+        <!-- Hide JavaScript from older browsers
+        window.onunload = function() {
+            submitcount = 0;
+        }
+        var submitcount = 0;
+
+        function checkSubmit() {
+            if (submitcount == 0) {
+                submitcount++;
+                return true;
+            } else {
+                alert("Your changes have already been submitted.");
+                return false;
+            }
+        }
+        //  End script hiding -->
+    </SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+        <!-- Hide JavaScript from older browsers
+        //  Function to open a window
+        function windowOpen(window_url) {
+            helpWin = window.open(window_url, '', 'toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
+            if (document.images) {
+                if (helpWin) helpWin.focus()
+            }
+        }
+        //  End script hiding -->
+    </SCRIPT>
+</HEAD>
+
+<BODY>
+    <div class="banner-wrapper-header">
+        <a href="https://truview.truman.edu">
+            <img src="https://truview.truman.edu/image/layout_set_logo?img_id=1030" />
+        </a>
+        <a href="https://truview.truman.edu" class="back-button btn btn-default" title="Back to TruView" style="display:none;">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <ul class="dockbar">
+            <li id="digital-measures-item" style="display:none;">
+                <a href="https://truview.truman.edu/group/truview/truman?digital_measures=1">
+                    <img src="https://truview.truman.edu/TruView-theme/images/digital-measures-30x30.png" width="30" height="30" /> Digital Measures
+                </a>
+            </li>
+            <li id="blackboard-item" style="display:none;">
+                <a href="https://liferay.truman.edu/group/truview/truman?blackboard=1">
+                    <img src="https://liferay.truman.edu/TruView-theme/images/blackboard-30x30.png" width="30" height="30" /> Blackboard
+                </a>
+            </li>
+            <li id="degree-works-item" style="display:none;">
+                <a href="https://shale.truman.edu:8443/ssomanager/c/SSB?pkg=https%3A%2F%2Fshale.truman.edu%2Fadmin%2Fdegrwork_redir.intercept">
+                    <img src="https://liferay.truman.edu/TruView-theme/images/degree-works-30x30.png" width="30" height="30" /> DegreeWorks
+                </a>
+            </li>
+            <li id="student-email-item" style="display:none;">
+                <a href="https://mail.google.com/a/truman.edu">
+                    <img src="https://liferay.truman.edu/TruView-theme/images/googlemail-30.png" width="30" height="30" /> Student Email
+                </a>
+            </li>
+            <li class="user-avatar dropdown" style="display:none;">
+                <a href="#" class="user-avatar-link dropdown-toggle" data-toggle="dropdown">
+                    <img class="user-avatar-image" src="" width="20" height="20" />
+                </a>
+                <ul class="dropdown-menu" style="display:none;">
+                    <li>
+                        <a id="sign-out" href="https://truview.truman.edu/c/portal/logout">
+                            <i class="fa fa-power-off"></i> Sign Out
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <DIV class="headerwrapperdiv">
+        <DIV class="pageheaderdiv1">
+            <A HREF="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</A>
+            <H1>Banner SSB - ADMIN</H1>
+        </DIV>
+        <DIV class="headerlinksdiv">
+            <SPAN class="pageheaderlinks2">
+<MAP NAME="Module_Navigation_Links_H" title="Module Navigation Links">
+<p>
+<A HREF="#skip_Module_Navigation_Links_H" onMouseover="window.status='Skip Module Navigation Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Module Navigation Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Module Navigation Links</A>
+<TABLE  CLASS="plaintable" SUMMARY="This is main table for displaying Tab Items."
+                          WIDTH="100%" cellSpacing=0 cellPadding=0 border=0>
+<TR>
+<TD CLASS="pldefault">
+<TABLE  CLASS="plaintable" SUMMARY="This table displays Tab Items."
+                 cellSpacing=0 cellPadding=0 border=0>
+<TR>
+<td class="taboff" height=22>
+<A HREF="/admin/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu" onMouseover="window.status='Personal Information'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Personal Information'; return true" onBlur="window.status=''; return true" >Personal Info</A>
+</TD>
+<TD class="bgtaboff" height=22 vAlign="top" align="right">
+<IMG SRC="https://shale.truman.edu/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+<td class="tabon"  height=22>
+<A HREF="/admin/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" onMouseover="window.status='Student & Financial Aid'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Student & Financial Aid'; return true" onBlur="window.status=''; return true" >Student & Financial Aid</A>
+</TD>
+<TD class="bgtabon"  height=22 vAlign="top" align="right">
+<IMG SRC="https://shale.truman.edu/wtlgifs/web_tab_corner_right.gif" ALT="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD class="bgtabon" width="100%" colSpan=2><IMG SRC="https://shale.truman.edu/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10></TD></TR></TABLE>
+</MAP>
+</SPAN>
+            <a name="skip_Module_Navigation_Links_H"></a>
+        </DIV>
+        <TABLE CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox." WIDTH="100%">
+            <TR>
+                <TD CLASS="pldefault">
+                    <DIV class="headerlinksdiv2">
+                        <FORM ACTION="/admin/twbksrch.P_ShowResults" METHOD="POST">
+                            Search
+                            <SPAN class="fieldlabeltextinvisible"><LABEL for=keyword_in_id><SPAN class="fieldlabeltext">Search</SPAN>
+                            </LABEL>
+                            </SPAN>
+                            <INPUT TYPE="text" NAME="KEYWRD_IN" SIZE="20" MAXLENGTH="65" ID="keyword_in_id">
+                            <INPUT TYPE="submit" VALUE="Go">
+                        </FORM>
+                    </div>
+                </TD>
+                <TD CLASS="pldefault">
+                    <p class="rightaligntext"></p>
+                    <SPAN class="pageheaderlinks">
+<A HREF="/admin/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu"  class="submenulinktext2" id="ssbbackurl">RETURN TO MENU</A>
+|
+<A HREF="/admin/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&amp;depth_in=2&amp;columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</A>
+|
+<A HREF="/admin/twbkfrmt.P_DispHelp?pagename_in=bwskfreg.P_AddDropCrse" accesskey="H" onClick="popup = window.open('/admin/twbkfrmt.P_DispHelp?pagename_in=bwskfreg.P_AddDropCrse', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</A>
+|
+<A HREF="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</A>
+</span>
+                </TD>
+            </TR>
+        </TABLE>
+    </DIV>
+    <DIV class="pagetitlediv">
+        <TABLE CLASS="plaintable" SUMMARY="This table displays title and static header displays." WIDTH="100%">
+            <TR>
+                <TD CLASS="pldefault">
+                    <H2>Mock Registration Page - Tanner's Truman Registration Helper</H2>
+                    <H3>Warning: This is a fake page, and is meant to be used for testing. This will not register you for any classes.</H3>
+                </TD>
+                <TD CLASS="pldefault">
+                    &nbsp;
+                </TD>
+                <TD CLASS="pldefault">
+                    <p class="rightaligntext"></p>
+                    <DIV class="staticheaders">
+                    </div>
+                </TD>
+            </TR>
+            <TR>
+                <TD class="bg3" width="100%" colSpan=3>
+                    <IMG SRC="https://shale.truman.edu/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image" NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10>
+                </TD>
+            </TR>
+        </TABLE>
+        <a name="main_content"></a>
+    </DIV>
+    <DIV class="pagebodydiv">
+        <!--  ** END OF twbkwbis.P_OpenDoc **  -->
+        <BR>
+        <FORM METHOD="POST" onSubmit="submitCRNs();return false;">
+            <DIV class="infotextdiv">
+                <TABLE CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information.">
+                    <TR>
+                        <TD CLASS="indefault">
+                            <IMG SRC="https://shale.truman.edu/wtlgifs/twgginfo.gif" ALT="Information" CLASS="headerImg" TITLE="Information" NAME="Info" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=24 WIDTH=27>
+                        </TD>
+                        <TD CLASS="indefault">
+                            <SPAN class="infotext"> Use this form to add or drop classes for the selected term.<br>
+If you are adding a closed course for which you received an <b>override</b>, you must enter the CRN for the course in the boxes below.<br>
+If you are looking for more information on wait lists, please visit the <A href="http://wp-internal.truman.edu/registrar/registration/wait-list-faq/"target="_blank"><u>Wait List FAQ</u></A> page.
+<br>
+<b>Off-schedule courses</b> must be added and dropped in the Registrar's Office, McClain Hall 104.<p>
+
+<b> Other useful links: </b>
+<ul>
+<li><A href="http://www.truman.edu/majors-programs/academic-resources/schedule-of-classes-fees/"target="_blank"><u>Add/Drop Deadlines and Fees</u></A>
+<li><A href="http://wp-internal.truman.edu/registrar/registration/resolving-registration-errors/"target="_blank"><u>Resolving Registration Errors</u></A>
+<li><A href="http://www.truman.edu/registrar/registration/withdrawal-policy/"target="_blank"><u>Withdrawal Instructions</u></A>
+<li><A href="http://wp-internal.truman.edu/registrar/registration/wait-list-forms"target="_blank"><u>Wait List Priority Form</u></A> (this form is only to be used to request special consideration for placement in a class due to pending graduation etc.)
+</ul>
+
+
+
+<FONT COLOR="FF0000"><b>YOU MUST CLICK THE "SUBMIT CHANGES" BUTTON AT THE BOTTOM OF THE SCREEN
+TO ADD OR DROP CLASSES.</b> </FONT> <br>Confirm that your changes have been
+received by reviewing your schedule using the "view my detailed schedule"
+option on the Student Tab.</SPAN>
+                        </TD>
+                    </TR>
+                </TABLE>
+                <P>
+            </DIV>
+            <INPUT TYPE="hidden" NAME="term_in" VALUE="201710">
+            <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="CRN_IN" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="start_date_in" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="end_date_in" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="SUBJ" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="CRSE" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="SEC" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="LEVL" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="CRED" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="GMOD" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="TITLE" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="MESG" VALUE="DUMMY">
+            <INPUT TYPE="hidden" NAME="REG_BTN" VALUE="DUMMY">
+            <H3>Add Classes Worksheet</H3>
+            <TABLE CLASS="dataentrytable" SUMMARY="Add Classes Data Entry" WIDTH="100%">
+                <TR>
+                    <TD COLSPAN="10" CLASS="detitle" scope="colgroup">
+                        <ACRONYM title="Course Reference Numbers">CRNs</ACRONYM>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id1><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id1">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id2><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id2">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id3><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id3">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id4><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id4">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id5><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id5">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id6><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id6">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id7><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id7">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id8><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id8">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id9><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id9">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+                    <TD CLASS="dedefault">
+                        <INPUT TYPE="hidden" NAME="RSTS_IN" VALUE="RW">
+                        <LABEL for=crn_id10><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
+                        <INPUT TYPE="text" NAME="CRN_IN" SIZE="6" MAXLENGTH="5" ID="crn_id10">
+                        <INPUT TYPE="hidden" NAME="assoc_term_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="start_date_in" VALUE="">
+                        <INPUT TYPE="hidden" NAME="end_date_in" VALUE="">
+                    </TD>
+            </TABLE>
+            <INPUT TYPE="hidden" NAME="regs_row" VALUE="5">
+            <INPUT TYPE="hidden" NAME="wait_row" VALUE="0">
+            <INPUT TYPE="hidden" NAME="add_row" VALUE="10">
+
+            <BR>
+            <INPUT TYPE="submit" NAME="REG_BTN" VALUE="Submit Changes">
+            <INPUT TYPE="button" VALUE="Class Search">
+            <INPUT TYPE="reset" VALUE="Reset">
+        </FORM>
+
+        <!--  ** START OF twbkwbis.P_CloseDoc **  -->
+        <TABLE CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page." WIDTH="100%" cellSpacing=0 cellPadding=0 border=0>
+            <TR>
+                <TD class="bgtabon" width="100%" colSpan=2>
+                    <IMG SRC="https://shale.truman.edu/wtlgifs/web_transparent.gif" ALT="Transparent Image" CLASS="headerImg" TITLE="Transparent Image" NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10>
+                </TD>
+            </TR>
+        </TABLE>
+        <A HREF="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</A>
+    </DIV>
+    <DIV class="footerbeforediv">
+
+    </DIV>
+    <DIV class="footerlinksdiv">
+        <SPAN class="pagefooterlinks">
+<MAP NAME="Add/Drop_Classes:__Links_F" title="Add/Drop Classes:  Links">
+<p>
+<A HREF="#skip_Add/Drop_Classes:__Links_F" onMouseover="window.status='Skip Add/Drop Classes:  Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Add/Drop Classes:  Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Add/Drop Classes:  Links</A>
+<P>[ <A HREF="/admin/bwskoacc.P_ViewHold" onMouseover="window.status='View Holds'; return true" onMouseout="window.status=''; return true" onFocus="window.status='View Holds'; return true" onBlur="window.status=''; return true" >View Holds</A>
+ | <A HREF="/admin/bzskbnbk.p_callbookstore" onMouseover="window.status='Order Books from Truman Bookstore'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Order Books from Truman Bookstore'; return true" onBlur="window.status=''; return true" >Order Books from Truman Bookstore</A>
+ ]
+</MAP>
+</SPAN>
+        <a name="skip_Add/Drop_Classes:__Links_F"></a>
+    </DIV>
+    <DIV class="footerafterdiv">
+
+    </DIV>
+    <DIV class="globalafterdiv">
+
+    </DIV>
+    <DIV class="globalfooterdiv">
+
+    </DIV>
+    <DIV class="pagefooterdiv">
+        <SPAN class="releasetext">Release: 8.7.1</SPAN>
+    </DIV>
+    <DIV class="poweredbydiv">
+    </DIV>
+    <DIV class="div1"></DIV>
+    <DIV class="div2"></DIV>
+    <DIV class="div3"></DIV>
+    <DIV class="div4"></DIV>
+    <DIV class="div5"></DIV>
+    <DIV class="div6"></DIV>
+    <div class="banner_copyright"> <br>
+        <h5>© 2016 Ellucian Company L.P. and its affiliates.<br></h5>
+    </div>
+    <script type="text/javascript" SRC="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" SRC="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script>
+      function submitCRNs() {
+        swal({
+          title: "Nice!",
+          text: "If this were really registration, you would have successfully submitted your classes.\n\nThe page will now reload.",
+          type: "success"
+        },
+        function(){
+          location.reload();
+        });
+      }
+    </script>
+</BODY>
+
+</HTML>
